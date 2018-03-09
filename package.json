@@ -2,7 +2,6 @@
   "scripts": {
     "start": "node nithya-bot.js"
   },
-
   "dependencies": {
     "botkit": "^0.6.11"
   }

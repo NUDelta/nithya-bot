@@ -1,1 +1,1 @@
-web: node nithya-bot.js
+worker: node nithya-bot.js

@@ -1,8 +1,12 @@
 const Botkit = require("botkit");
 const MongoClient = require('mongodb').MongoClient;
+const PORT = process.env.PORT || 5000;
 require('dotenv').config();
 
+
+
 console.log(process.env.MONGO_URL);
+console.log(process.env.PORT);
 
 //connect to MongoDB
 
@@ -46,6 +50,10 @@ var bot = controller.spawn({
 	token: process.env.SLACK_TOKEN
 }).startRTM();
 
+
+controller.setupWebserver(PORT, function(err, webserver) {
+	controller.createWebhookEndpoints(controller.webserver);
+});
 
 //bot interactions
 controller.hears(["hi"], "direct_message,direct_mention,mention", function(bot, message) {

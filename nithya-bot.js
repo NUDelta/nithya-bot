@@ -1,12 +1,12 @@
 const Botkit = require("botkit");
 const MongoClient = require('mongodb').MongoClient;
-var t = "xoxb-327084990610-pQnq37AtCfVCR2zlYn6uN9NW" //slack token
-const MONGO_URL =  'mongodb://moliri:regulation@ds215019.mlab.com:15019/nithya';
+require('dotenv').config();
 
+console.log(process.env.MONGO_URL);
 
 //connect to MongoDB
 
-MongoClient.connect(MONGO_URL, (err, client) => {
+MongoClient.connect(process.env.MONGO_URL, (err, client) => {
 	if(err) {
 		return console.log(err);
 	}
@@ -32,10 +32,10 @@ MongoClient.connect(MONGO_URL, (err, client) => {
 });
 
 
-// if (!process.env.token) {
-// 	console.log("Error: Specify token in environment");
-// 	process.exit(1);
-// }
+if (!process.env.SLACK_TOKEN) {
+	console.log("Error: Specify token in environment");
+	process.exit(1);
+}
 
 //set up bot
 var controller = Botkit.slackbot({
@@ -43,8 +43,7 @@ var controller = Botkit.slackbot({
 });
 
 var bot = controller.spawn({
-	// token: process.env.token
-	token: t
+	token: process.env.SLACK_TOKEN
 }).startRTM();
 
 

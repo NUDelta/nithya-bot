@@ -64,7 +64,370 @@ controller.hears(['nithya'], "ambient", function(bot, message) {
 
 });
 
-// ***************** OTG *********************** //
+// ***************** EXAMPLE PROJECT *********************** //
+
+// projectname LEARNING, BEFORE SIG, END SPRINT
+
+controller.hears(['projectname learning'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`previous risks`: ");
+		convo.say("`previous sprint focus`: ");
+		convo.say("`what we learned`: ");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "text": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "actions": [
+										{
+		                    "text": "update what we learned",
+												"type": "button",
+		                    "url": "URL"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+
+});
+
+// projectname RISKS - BEFORE SIG, EVERY WEEK
+
+controller.hears(['projectname risks'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current risks`: ");
+		convo.say("`current sprint focus`: ");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Do your sprint stories focus on the biggest risk for your project?",
+		            "text": "Do your sprint stories focus on the biggest risk for your project?",
+		            "actions": [
+		                {
+		                    "text": "update risks and focus",
+												"type": "button",
+		                    "url": "URL"
+		                },
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "URL"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+});
+
+// projectname TAKEAWAYS - AFTER SIG, EVERY WEEK
+controller.hears(['projectname takeaways'], "ambient", function(bot, message) {
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current takeaways`: ");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "text": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "actions": [
+										{
+												"text": "update takeaways",
+												"type": "button",
+												"url": "URL"
+										},
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "URL"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+});
+
+
+// *************************************** BB ************************************ //
+
+// ***************** CE API *********************** //
+
+// CE API LEARNING, BEFORE SIG, END SPRINT
+
+controller.hears(['ce api learning'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`previous risks`: Don't have a clear understanding of the limitations and ramifications of our current API. Based on your findings, how will your system model change?");
+		convo.say("`previous sprint focus`: Understanding the direction our architecture will take");
+		convo.say("`what we learned`: empty");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "text": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "actions": [
+										{
+		                    "text": "update what we learned",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+
+});
+
+// CE API RISKS - BEFORE SIG, EVERY WEEK
+
+controller.hears(['ce api risks'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current risks`: empty");
+		convo.say("`current sprint focus`: empty");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Do your sprint stories focus on the biggest risk for your project?",
+		            "text": "Do your sprint stories focus on the biggest risk for your project?",
+		            "actions": [
+		                {
+		                    "text": "update risks and focus",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+		                },
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+});
+
+// CE API TAKEAWAYS - AFTER SIG, EVERY WEEK
+
+controller.hears(['ce api takeaways'], "ambient", function(bot, message) {
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current takeaways`: dont switch to a new problem bc we haven't solved our old one");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "text": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "actions": [
+										{
+												"text": "update takeaways",
+												"type": "button",
+												"url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+										},
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+		                }
+		            ]
+		        }
+		    ]
+			});
+	});
+});
+
+
+// ***************** MCGONNAGAL *********************** //
+
+// MCGONNAGAL LEARNING, BEFORE SIG, END SPRINT
+
+controller.hears(['mcgonnagal learning'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`previous risks`: Same as above (related work section and first half of paper), but now hopefully I'll be able to dedicate more time to actually writing and iterating");
+		convo.say("`previous sprint focus`: Focus on improving paper + personal writing skills");
+		convo.say("`what we learned`: empty");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "text": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "actions": [
+										{
+		                    "text": "update what we learned",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=641611141"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+
+});
+
+// MCGONNAGAL RISKS - BEFORE SIG, EVERY WEEK
+
+controller.hears(['mcgonnagal risks'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current risks`: empty");
+		convo.say("`current sprint focus`: empty");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Do your sprint stories focus on the biggest risk for your project?",
+		            "text": "Do your sprint stories focus on the biggest risk for your project?",
+		            "actions": [
+		                {
+		                    "text": "update risks and focus",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=641611141"
+		                },
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=641611141"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+});
+
+// MCGONNAGAL TAKEAWAYS - AFTER SIG, EVERY WEEK
+
+controller.hears(['mcgonnagal takeaways'], "ambient", function(bot, message) {
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current takeaways`: (1) office hours	(2) feedback is essentail when writing (3) send draft on monday	(4) send ryan nopte asking for feedback on status update");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "text": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "actions": [
+										{
+												"text": "update takeaways",
+												"type": "button",
+												"url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=641611141"
+										},
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=641611141"
+		                }
+		            ]
+		        }
+		    ]
+		});
+	});
+});
+
+// ***************** CN *********************** //
+
+// CN LEARNING, BEFORE SIG, END SPRINT
+
+controller.hears(['cn learning'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`previous risks`: We want to nail down a solid interface model and system model for our system");
+		convo.say("`previous sprint focus`: We want to test out the feasibility of different types of abstractions more, also, ways to use the current CE API architecture to write different types in full length including a running UI");
+		convo.say("`what we learned`: empty");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "text": "Did your sprint stories help you address these risks in your project? What did you learn?",
+		            "actions": [
+										{
+		                    "text": "update what we learned",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=2088211444"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+
+});
+
+// CN RISKS - BEFORE SIG, EVERY WEEK
+
+controller.hears(['cn risks'], "ambient", function(bot, message) {
+
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current risks`: empty");
+		convo.say("`current sprint focus`: empty");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Do your sprint stories focus on the biggest risk for your project?",
+		            "text": "Do your sprint stories focus on the biggest risk for your project?",
+		            "actions": [
+		                {
+		                    "text": "update risks and focus",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=2088211444"
+		                },
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=2088211444"
+		                }
+		            ]
+		        }
+		    ]
+			}
+		);
+	});
+});
+
+// CN TAKEAWAYS - AFTER SIG, EVERY WEEK
+
+controller.hears(['cn takeaways'], "ambient", function(bot, message) {
+	bot.startConversation(message, function(err, convo){
+		convo.say("`current takeaways`: (1) Our goal is to identify inconveniences that come from trying to create narratives in the CE api (2) Our goal is to think of all the discomforts in terms of narrative, such as plot and timeline");
+		convo.say(
+			{"attachments": [
+		        {
+		            "fallback": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "text": "Have you updated your sprint stories + tasks based on your current takeaways?",
+		            "actions": [
+										{
+												"text": "update takeaways",
+												"type": "button",
+												"url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=2088211444"
+										},
+										{
+		                    "text": "update sprint",
+												"type": "button",
+		                    "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=2088211444"
+		                }
+		            ]
+		        }
+		    ]
+			});
+	});
+});
+
+
+// *************************************** OTG ************************************ //
+
+// ***************** HS4X *********************** //
 
 // HS4X LEARNING, BEFORE SIG, END SPRINT
 
@@ -127,16 +490,21 @@ controller.hears(['hs4x risks'], "ambient", function(bot, message) {
 
 // HS4X TAKEAWAYS - AFTER SIG, EVERY WEEK
 
-controller.hears(['hs4x takeaways sprint2'], "ambient", function(bot, message) {
-	bot.reply(message, "`takeaways from SIG`: (1) Iterative testing -- we want to learn something about the design of our experience every week (2) Tech is more solid now -- focus on the design tree");
+controller.hears(['hs4x takeaways'], "ambient", function(bot, message) {
+	bot.reply(message, "`current takeaways`: (1) Iterative testing -- we want to learn something about the design of our experience every week (2) Tech is more solid now -- focus on the design tree");
 
 	bot.reply(message,
 	{"attachments": [
         {
-            "fallback": "Have you updated your sprint stories + tasks based on your takeaways from SIG?",
-            "text": "Have you updated your sprint stories + tasks based on your takeaways from SIG?",
+            "fallback": "Have you updated your sprint stories + tasks based on your current takeaways?",
+            "text": "Have you updated your sprint stories + tasks based on your current takeaways?",
             "actions": [
-                {
+								{
+										"text": "update takeaways",
+										"type": "button",
+										"url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+								},
+								{
                     "text": "update sprint",
 										"type": "button",
                     "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit#gid=1488501448"
@@ -147,6 +515,7 @@ controller.hears(['hs4x takeaways sprint2'], "ambient", function(bot, message) {
 	});
 });
 
+// ***************** OTG DELIVERY *********************** //
 
 // OTG DELIVERY LEARNING, BEFORE SIG, END SPRINT
 
@@ -212,15 +581,20 @@ controller.hears(['otg delivery risks'], "ambient", function(bot, message) {
 // OTG DELIVERY TAKEAWAYS - AFTER SIG, EVERY WEEK
 
 controller.hears(['otg delivery takeaways'], "ambient", function(bot, message) {
-	bot.reply(message, "`takeaways from SIG`: (1) Status update - create 3 user stories of inconenience (2) Meet with Kapil - production certificates and pem files");
+	bot.reply(message, "`current takeaways`: (1) Status update - create 3 user stories of inconenience (2) Meet with Kapil - production certificates and pem files");
 
 	bot.reply(message,
 	{"attachments": [
         {
-            "fallback": "Have you updated your sprint stories + tasks based on your takeaways from SIG?",
-            "text": "Have you updated your sprint stories + tasks based on your takeaways from SIG?",
+            "fallback": "Have you updated your sprint stories + tasks based on your current takeaways?",
+            "text": "Have you updated your sprint stories + tasks based on your current takeaways?",
             "actions": [
-                {
+								{
+										"text": "update takeaways",
+										"type": "button",
+										"url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit?pli=1#gid=862574027"
+								},
+								{
                     "text": "update sprint",
 										"type": "button",
                     "url": "https://docs.google.com/spreadsheets/d/1y8jGAnF5QVylwvAaz8P-RnQ0VQxrsvj5YnMTUysfoKM/edit#gid=442748249"
